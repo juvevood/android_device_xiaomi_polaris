@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/polaris
 # Assert
 TARGET_OTA_ASSERT_DEVICE := polaris
 
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := polaris_defconfig
 
