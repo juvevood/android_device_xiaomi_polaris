@@ -154,4 +154,7 @@
          dim before the device goes to sleep.
     -->
     <fraction name="config_maximumScreenDimRatio">29.999996%</fraction>
+
+    <!-- Is device Dual LTE capable -->
+    <bool name="config_dual_LTE_capability">true</bool>
 </resources>
