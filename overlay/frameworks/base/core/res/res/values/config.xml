@@ -24,7 +24,7 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
-	<!-- Array of hysteresis constraint values for brightening, represented as tenths of a
+    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
          config_dynamicHysteresisLuxLevels. The brightening threshold is calculated as
          lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
@@ -40,8 +40,8 @@
         <item>200</item>
         <item>200</item>
     </integer-array>
-	
-     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
+
+    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
          config_dynamicHysteresisLuxLevels. The darkening threshold is calculated as
          lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
@@ -57,8 +57,8 @@
         <item>500</item>
         <item>500</item>
     </integer-array>
-	
-     <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
+
+    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
          values by calculating the index to use for lookup and then setting the constraint value
          to the corresponding value of the array. The new brightening hysteresis constraint value
          is the n-th element of config_dynamicHysteresisBrightLevels, and the new darkening
@@ -77,24 +77,24 @@
         <item>2000</item>
         <item>4000</item>
     </integer-array>
-	
+
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-	<!-- Initial light sensor event rate in milliseconds for automatic brightness control. This is
+    <!-- Initial light sensor event rate in milliseconds for automatic brightness control. This is
          used for obtaining the first light sample when the device stops dozing.
          Set this to -1 to disable this feature. -->
     <integer name="config_autoBrightnessInitialLightSensorRate">-1</integer>
-    
-	<!-- Light sensor event rate in milliseconds for automatic brightness control. -->
+
+    <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
     <integer name="config_autoBrightnessLightSensorRate">250</integer>
-	
+
     <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer translatable="false" name="config_brightness_ramp_rate_fast">4933</integer>
+    <integer translatable="false" name="config_brightness_ramp_rate_fast">1233</integer>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer translatable="false" name="config_brightness_ramp_rate_slow">3946</integer>
+    <integer translatable="false" name="config_brightness_ramp_rate_slow">986</integer>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -109,32 +109,41 @@
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>2</item>
+        <item>3</item>
+        <item>4</item>
         <item>5</item>
-        <item>9</item>
-        <item>13</item>
-        <item>17</item>
-        <item>21</item>
-        <item>26</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>15</item>
+        <item>18</item>
+        <item>22</item>
         <item>30</item>
         <item>40</item>
-        <item>83</item>
-        <item>104</item>
-        <item>200</item>
-        <item>400</item>
-        <item>500</item>
-        <item>600</item>
-        <item>700</item>
-        <item>800</item>
-        <item>1000</item>
-        <item>1200</item>
-        <item>1500</item>
-        <item>1800</item>
-        <item>2000</item>
-        <item>2165</item>
-        <item>2680</item>
-        <item>3000</item>
-        <item>3540</item>
-        <item>4000</item>
+        <item>50</item>
+        <item>80</item>
+        <item>110</item>
+        <item>155</item>
+        <item>173</item>
+        <item>300</item>
+        <item>387</item>
+        <item>492</item>
+        <item>533</item>
+        <item>726</item>
+        <item>883</item>
+        <item>1023</item>
+        <item>1222</item>
+        <item>1501</item>
+        <item>1733</item>
+        <item>2034</item>
+        <item>2227</item>
+        <item>2517</item>
+        <item>3042</item>
+        <item>3495</item>
+        <item>3998</item>
+        <item>4472</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -142,37 +151,78 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>64</item>
-        <item>64</item>
-        <item>64</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>32</item>
+        <item>32</item>
+        <item>32</item>
+        <item>72</item>
+        <item>72</item>
+        <item>72</item>
+        <item>108</item>
+        <item>108</item>
+        <item>108</item>
         <item>128</item>
-        <item>240</item>
-        <item>320</item>
-        <item>416</item>
-        <item>560</item>
-        <item>720</item>
-        <item>736</item>
-        <item>736</item>
-        <item>736</item>
-        <item>960</item>
-        <item>960</item>
-        <item>960</item>
-        <item>1024</item>
-        <item>1056</item>
-        <item>1120</item>
-        <item>1168</item>
-        <item>1280</item>
-        <item>1408</item>
-        <item>1760</item>
-        <item>2080</item>
-        <item>2160</item>
-        <item>2320</item>
-        <item>2880</item>
-        <item>3200</item>
-        <item>3840</item>
-        <item>4095</item>
+        <item>128</item>
+        <item>128</item>
+        <item>148</item>
+        <item>184</item>
+        <item>196</item>
+        <item>208</item>
+        <item>212</item>
+        <item>236</item>
+        <item>244</item>
+        <item>256</item>
+        <item>280</item>
+        <item>308</item>
+        <item>340</item>
+        <item>388</item>
+        <item>428</item>
+        <item>480</item>
+        <item>524</item>
+        <item>596</item>
+        <item>700</item>
+        <item>744</item>
+        <item>836</item>
+        <item>1023</item>
     </integer-array>
 
+	<integer-array name="config_autoBrightnessDisplayValuesNits">
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>13</item>
+        <item>24</item>
+        <item>33</item>
+        <item>42</item>
+        <item>57</item>
+        <item>74</item>
+        <item>76</item>
+        <item>76</item>
+        <item>76</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>105</item>
+        <item>109</item>
+        <item>115</item>
+        <item>120</item>
+        <item>132</item>
+        <item>145</item>
+        <item>181</item>
+        <item>214</item>
+        <item>223</item>
+        <item>239</item>
+        <item>297</item>
+        <item>330</item>
+        <item>396</item>
+        <item>423</item>
+    </integer-array>
+	
 	<!-- Minimum allowable screen brightness to use in a very dark room.
          This value sets the floor for the darkest possible auto-brightness
          adjustment.  It is expected to be somewhat less than the first entry in
@@ -181,43 +231,43 @@
          dark rooms. The contents of the screen must still be clearly visible
          in darkness (although they may not be visible in a bright room). -->
     <integer name="config_screenBrightnessDark">1</integer>
-	
+
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">16</integer>
+    <integer name="config_screenBrightnessDim">4</integer>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">2055</integer>
+    <integer name="config_screenBrightnessSettingDefault">268</integer>
 
-	<!-- Maximum screen brightness allowed by the power manager.
+    <!-- Maximum screen brightness allowed by the power manager.
          The user is forbidden from setting the brightness above this level. -->
-    <integer name="config_screenBrightnessSettingMaximum">4095</integer>
-	
+    <integer name="config_screenBrightnessSettingMaximum">1023</integer>
+
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">15</integer>
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
      
 	<!-- Whether or not to skip the initial brightness ramps when the display transitions to
          STATE_ON. Setting this to true will skip the brightness ramp to the last stored active
          brightness value and will repeat for the following ramp if autobrightness is enabled. -->
     <bool name="config_skipScreenOnBrightnessRamp">false</bool>
 
-	<!-- Default screen brightness for VR setting. -->
+    <!-- Default screen brightness for VR setting. -->
     <integer name="config_screenBrightnessForVrSettingDefault">1376</integer>
-    
-	<!-- Maximum screen brightness setting allowed for VR. -->
+
+    <!-- Maximum screen brightness setting allowed for VR. -->
     <integer name="config_screenBrightnessForVrSettingMaximum">4095</integer>
-     
-	<!-- Minimum screen brightness setting allowed for VR. Device panels start increasing pulse
+
+    <!-- Minimum screen brightness setting allowed for VR. Device panels start increasing pulse
          width as brightness decreases below this theshold. -->
     <integer name="config_screenBrightnessForVrSettingMinimum">1264</integer>
-	
-	<!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
     <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
-    
-	<!-- When the screen is turned on, the previous estimate of the ambient light level at the time
+
+    <!-- When the screen is turned on, the previous estimate of the ambient light level at the time
          the screen was turned off is restored and is used to determine the initial screen
          brightness.
          If this flag is true, then the ambient light level estimate will be promptly recomputed
@@ -227,7 +277,7 @@
          brightening or dimming debounce thresholds.  As a result, it may take somewhat longer to
          adapt to the environment.  This mode may be better suited for watches. -->
     <bool name="config_autoBrightnessResetAmbientLuxAfterWarmUp">true</bool>
-	
+
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
          when adapting to brighter or darker environments.  This parameter controls how quickly
@@ -273,6 +323,7 @@
         <item>2000.0</item>
         <item>4000.0</item>
     </array>
+
     <!-- Array of nits values to define the minimum brightness curve, which guarantees that any
          brightness curve that dips below it is rejected by the system.
          This should map lux to the absolute minimum nits that are still readable in that ambient
