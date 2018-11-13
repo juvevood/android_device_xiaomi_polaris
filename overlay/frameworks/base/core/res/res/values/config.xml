@@ -191,7 +191,7 @@
         <item>1023</item>
     </integer-array>
 
-	<integer-array name="config_autoBrightnessDisplayValuesNits">
+    <integer-array name="config_autoBrightnessDisplayValuesNits">
         <item>6</item>
         <item>6</item>
         <item>6</item>
@@ -223,7 +223,7 @@
         <item>423</item>
     </integer-array>
 	
-	<!-- Minimum allowable screen brightness to use in a very dark room.
+    <!-- Minimum allowable screen brightness to use in a very dark room.
          This value sets the floor for the darkest possible auto-brightness
          adjustment.  It is expected to be somewhat less than the first entry in
          config_autoBrightnessLcdBacklightValues so as to allow the user to have
@@ -237,6 +237,11 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">4</integer>
 
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDoze">4</integer>
+
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
     <integer name="config_screenBrightnessSettingDefault">268</integer>
@@ -249,7 +254,7 @@
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
      
-	<!-- Whether or not to skip the initial brightness ramps when the display transitions to
+    <!-- Whether or not to skip the initial brightness ramps when the display transitions to
          STATE_ON. Setting this to true will skip the brightness ramp to the last stored active
          brightness value and will repeat for the following ramp if autobrightness is enabled. -->
     <bool name="config_skipScreenOnBrightnessRamp">false</bool>
@@ -312,7 +317,7 @@
     <!-- Is device Dual LTE capable -->
     <bool name="config_dual_LTE_capability">true</bool>
 	    
-	<!-- Array of lux values to define the minimum brightness curve, which guarantees that any
+    <!-- Array of lux values to define the minimum brightness curve, which guarantees that any
          brightness curve that dips below it is rejected by the system.
          This prevents auto-brightness from setting the screen so dark as to prevent the user from
          resetting or disabling it.
