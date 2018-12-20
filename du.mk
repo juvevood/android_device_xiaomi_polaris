@@ -6,8 +6,8 @@
 
 $(call inherit-product, device/xiaomi/polaris/device.mk)
 
-# Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/du/config/common.mk)
+# Inherit some common du stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := du_polaris
