@@ -58,3 +58,7 @@ PRODUCT_PACKAGES += \
 # Telephony
 PRODUCT_PACKAGES += \
     qti-telephony-common
+
+# use custom Apps
+PRODUCT_PACKAGES += \
+    JuveApps
