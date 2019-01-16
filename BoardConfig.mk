@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/polaris
 # Assert
 TARGET_OTA_ASSERT_DEVICE := polaris
 
+# Compile with SDClang
+TARGET_USE_SDCLANG := true
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
