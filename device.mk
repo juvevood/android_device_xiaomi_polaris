@@ -56,5 +56,5 @@ PRODUCT_PACKAGES += \
     Tag
 
 # Telephony
-PRODUCT_PACKAGES += \
-    qti-telephony-common
+#PRODUCT_PACKAGES += \
+#    qti-telephony-common
