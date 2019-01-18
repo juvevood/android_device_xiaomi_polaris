@@ -55,6 +55,3 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
-# Telephony
-#PRODUCT_PACKAGES += \
-#    qti-telephony-common
