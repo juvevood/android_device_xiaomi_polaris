@@ -6,7 +6,7 @@
 
 $(call inherit-product, device/xiaomi/polaris/device.mk)
 
-# Inherit some common du stuff.
+# Inherit some common dotos stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
