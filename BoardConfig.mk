@@ -35,3 +35,10 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+#Ignore Neverallows
+SELINUX_IGNORE_NEVERALLOWS := true
+
+#Treble disable
+PRODUCT_FULL_TREBLE := false
+PRODUCT_FULL_TREBLE_OVERRIDE := false
