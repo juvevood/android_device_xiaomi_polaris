@@ -11,7 +11,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/sdm845-common/sdm845-common-vend
 $(call inherit-product-if-exists, vendor/xiaomi/polaris/polaris-vendor.mk)
 
 # Boot animation
-TARGET_BOOT_ANIMATION_RES:2160
+TARGET_BOOT_ANIMATION_RES := 2160
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
