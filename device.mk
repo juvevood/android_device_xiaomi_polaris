@@ -7,7 +7,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/sdm845-common/sdm845-common-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/polaris/polaris-vendor.mk)
 
 # Boot animation
