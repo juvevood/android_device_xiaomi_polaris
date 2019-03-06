@@ -15,6 +15,8 @@ PRODUCT_DEVICE := polaris
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 2S
 PRODUCT_MANUFACTURER := Xiaomi
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 2160
 
 BUILD_FINGERPRINT := "Xiaomi/polaris/polaris:8.0.0/OPR1.170623.032/V9.5.19.0.ODGMIFA:user/release-keys"
 
